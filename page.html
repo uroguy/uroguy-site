@@ -79,6 +79,7 @@ section.view { display: grid; gap: 56px; }
 .hero p.lede { font-size: 1.2rem; color: var(--muted); max-width: 46ch; }
 .hero .actions { display: flex; gap: 12px; flex-wrap: wrap; }
 .hero h1 em { font-style: normal; color: var(--teal); }
+.hero-art { display: block; width: 100%; max-width: 420px; height: auto; margin-inline: auto; }
 
 /* Hydration chart: the signature detail */
 .chart { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 20px; display: grid; gap: 14px; }
@@ -221,6 +222,56 @@ footer.site .wrap { padding-block: 32px; display: grid; gap: 20px; }
         <a class="btn btn-ghost" href="#videos">Watch videos</a>
       </div>
     </div>
+    <div class="stack" style="gap:8px">
+    <svg class="hero-art" viewBox="0 0 340 220" role="img" aria-label="The UroGuy kidney happily watering a cactus with a giant waterfall from a watering can">
+      <ellipse cx="170" cy="204" rx="160" ry="10" fill="var(--soft)"/>
+      <!-- puddle -->
+      <ellipse cx="262" cy="203" rx="62" ry="8" fill="#8FD3EE" opacity=".55"/>
+      <!-- waterfall -->
+      <path d="M198 74 C228 66 256 70 268 84 C282 100 290 140 296 200 L232 200 C238 150 244 110 236 98 C228 88 212 86 200 90 Z" fill="#8FD3EE" opacity=".85"/>
+      <path d="M210 80 C236 76 254 82 262 96 M248 110 C252 140 250 170 248 196 M270 106 C278 140 282 170 284 196" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" opacity=".7"/>
+      <circle cx="226" cy="190" r="4" fill="#8FD3EE"/><circle cx="304" cy="186" r="5" fill="#8FD3EE"/><circle cx="216" cy="198" r="3" fill="#8FD3EE"/><circle cx="314" cy="196" r="3" fill="#8FD3EE"/>
+      <!-- cactus -->
+      <g>
+        <path d="M250 168 V96 a16 16 0 0 1 32 0 V168 Z" fill="#5FA35A"/>
+        <path d="M250 140 h-12 a8 8 0 0 1 -8 -8 v-18 a7 7 0 0 1 14 0 v12 h6 Z" fill="#5FA35A"/>
+        <path d="M282 128 h10 a8 8 0 0 0 8 -8 v-14 a7 7 0 0 0 -14 0 v8 h-4 Z" fill="#5FA35A"/>
+        <path d="M262 100 v60 M272 100 v60" stroke="#4A8A46" stroke-width="2" stroke-linecap="round"/>
+        <circle cx="261" cy="112" r="2.4" fill="var(--ink)"/>
+        <circle cx="274" cy="112" r="2.4" fill="var(--ink)"/>
+        <ellipse cx="267.5" cy="122" rx="3" ry="3.6" fill="var(--ink)"/>
+        <path d="M285 96 q4 6 0 9 q-4 -3 0 -9 Z" fill="#8FD3EE"/>
+        <circle cx="266" cy="79" r="5" fill="#F29BB5"/><circle cx="266" cy="79" r="2" fill="var(--straw)"/>
+        <path d="M241 120 l-5 -2 M246 104 l-5 -3 M287 150 l5 -1 M253 156 l-5 1" stroke="var(--ink)" stroke-width="1.2" stroke-linecap="round" opacity=".5"/>
+      </g>
+      <!-- pot -->
+      <path d="M238 166 h56 l-6 34 h-44 Z" fill="#D9774A"/>
+      <rect x="234" y="160" width="64" height="12" rx="3" fill="#E58A5C"/>
+      <!-- watering can -->
+      <g transform="rotate(-18 160 110)">
+        <path d="M150 95 l58 -22 l3 8 l-56 26 Z" fill="var(--straw)"/>
+        <ellipse cx="210" cy="76" rx="5" ry="9" transform="rotate(-20 210 76)" fill="#E3AE33"/>
+        <rect x="122" y="88" width="46" height="44" rx="8" fill="var(--straw)"/>
+        <path d="M128 92 a17 17 0 0 1 34 0" stroke="#E3AE33" stroke-width="6" fill="none"/>
+        <rect x="122" y="104" width="46" height="6" fill="#E3AE33"/>
+      </g>
+      <!-- kidney mascot -->
+      <g transform="translate(22 78) scale(3)">
+        <path d="M15 2 C25 2 30 7 30 13 C30 16.5 24.5 17 24.5 20.5 C24.5 24 30 24.5 30 28.5 C30 34.5 24 38 15 38 C7 38 3 31 3 20 C3 9 7 2 15 2 Z" fill="var(--teal)"/>
+        <path d="M25 21 q5 2 5.5 9 t1.5 9" stroke="var(--teal)" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+        <circle cx="10" cy="18" r="4" fill="var(--surface)" stroke="var(--ink)" stroke-width="1.7"/>
+        <circle cx="19.5" cy="18" r="4" fill="var(--surface)" stroke="var(--ink)" stroke-width="1.7"/>
+        <path d="M14 18 h1.5" stroke="var(--ink)" stroke-width="1.7"/>
+        <path d="M8.2 18.6 q1.8 -2 3.6 0 M17.7 18.6 q1.8 -2 3.6 0" stroke="var(--ink)" stroke-width="1.3" fill="none" stroke-linecap="round"/>
+        <ellipse cx="6.5" cy="25" rx="2" ry="1.3" fill="var(--straw)"/>
+        <ellipse cx="21.5" cy="25" rx="2" ry="1.3" fill="var(--straw)"/>
+        <path d="M10.5 25 q4 4.5 8 0 Z" fill="var(--ink)" stroke="var(--surface)" stroke-width="1.2" stroke-linejoin="round"/>
+        <path d="M8 8 q2.5 -3 6.5 -3.2" stroke="var(--surface)" stroke-width="1.5" fill="none" stroke-linecap="round" opacity=".45"/>
+        <path d="M27 14 q6 -3 9 -2" stroke="var(--teal)" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+        <path d="M28 27 q6 -2 9 -5" stroke="var(--teal)" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+      </g>
+      <path d="M40 60 l4 -8 l4 8 M30 74 l-6 -4" stroke="var(--straw)" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+    </svg>
     <div class="chart" aria-labelledby="chart-title">
       <div class="section-head"><h3 id="chart-title">Quick check: what's your pee saying?</h3></div>
       <div class="swatches" role="group" aria-label="Urine colour chart">
@@ -236,6 +287,7 @@ footer.site .wrap { padding-block: 32px; display: grid; gap: 20px; }
       <div class="scale label"><span>Well hydrated</span><span>Drink up</span></div>
       <p class="reading" id="reading" aria-live="polite"><strong>Pale straw:</strong> the sweet spot. You're well hydrated, keep doing what you're doing.</p>
       <p class="label" style="text-transform:none;letter-spacing:0">A rough guide only. Some foods, vitamins and medicines change colour. Red or brown pee is a reason to see a doctor.</p>
+    </div>
     </div>
   </div>
 
