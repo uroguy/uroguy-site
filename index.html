@@ -4,25 +4,29 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>UroGuy</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2034%2040%22%3E%3Cpath%20d%3D%22M15%202%20C25%202%2030%207%2030%2013%20C30%2016.5%2024.5%2017%2024.5%2020.5%20C24.5%2024%2030%2024.5%2030%2028.5%20C30%2034.5%2024%2038%2015%2038%20C7%2038%203%2031%203%2020%20C3%209%207%202%2015%202%20Z%22%20fill%3D%22%23E8735A%22/%3E%3Cpath%20d%3D%22M25%2021%20q5%202%205.5%209%20t1.5%209%22%20stroke%3D%22%23E8735A%22%20stroke-width%3D%222.4%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22/%3E%3Ccircle%20cx%3D%2210%22%20cy%3D%2218%22%20r%3D%224%22%20fill%3D%22%23fff%22%20stroke%3D%22%231A2340%22%20stroke-width%3D%221.7%22/%3E%3Ccircle%20cx%3D%2219.5%22%20cy%3D%2218%22%20r%3D%224%22%20fill%3D%22%23fff%22%20stroke%3D%22%231A2340%22%20stroke-width%3D%221.7%22/%3E%3Cpath%20d%3D%22M14%2018%20h1.5%22%20stroke%3D%22%231A2340%22%20stroke-width%3D%221.7%22/%3E%3Ccircle%20cx%3D%2210.7%22%20cy%3D%2218.5%22%20r%3D%221.4%22%20fill%3D%22%231A2340%22/%3E%3Ccircle%20cx%3D%2220.2%22%20cy%3D%2218.5%22%20r%3D%221.4%22%20fill%3D%22%231A2340%22/%3E%3Cellipse%20cx%3D%226.5%22%20cy%3D%2225%22%20rx%3D%222%22%20ry%3D%221.3%22%20fill%3D%22%23F8BBA6%22/%3E%3Cellipse%20cx%3D%2221.5%22%20cy%3D%2225%22%20rx%3D%222%22%20ry%3D%221.3%22%20fill%3D%22%23F8BBA6%22/%3E%3Cpath%20d%3D%22M11%2025.5%20q3.5%203.2%207%200%22%20stroke%3D%22%23fff%22%20stroke-width%3D%221.7%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22/%3E%3Cpath%20d%3D%22M8%208%20q2.5%20-3%206.5%20-3.2%22%20stroke%3D%22%23fff%22%20stroke-width%3D%221.5%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22%20opacity%3D%22.45%22/%3E%3C/svg%3E">
 <meta name="claude:viewport-fit-sides" content="cover">
 <meta name="description" content="UroGuy explains urology in plain language: kidney stones, prostate health, bladder and men's health. Educational content, not medical advice.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:wght@400;600&display=swap">
 <style>
-/* Layout: a friendly "clinic chart" feel. Cool teal ink for trust, straw-yellow accent borrowed from the hydration chart, mono labels like a lab report. Hash-routed views share one header and footer. */
+/* Layout: a friendly "clinic chart" feel. Deep navy ink for trust, soft coral accent on warm cream paper, mono labels like a lab report. Hash-routed views share one header and footer. */
 :root {
-  --bg: #F4F8F7;
-  --surface: #FFFFFF;
-  --soft: #E2EFED;
-  --ink: #0F2A2D;
-  --muted: #4C6568;
-  --line: #D3E1DF;
-  --teal: #0C6A68;
-  --teal-ink: #FFFFFF;
-  --straw: #F2C14E;
-  --straw-ink: #6E4E00;
-  --straw-soft: #FCF1D3;
+  --bg: #FAF6EF;
+  --surface: #FFFDF8;
+  --soft: #F1EADF;
+  --ink: #1A2340;
+  --muted: #5A6178;
+  --line: #E5DCCD;
+  --teal: #1F2B57;
+  --teal-ink: #FFFDF8;
+  --straw: #E8735A;
+  --straw-ink: #A23F27;
+  --straw-soft: #FBE8DF;
+  --accent-text: #C14F33;
+  --mascot: #E8735A;
+  --cheek: #F8BBA6;
   --font-display: "Bricolage Grotesque", "Avenir Next", "Segoe UI", system-ui, sans-serif;
   --font-body: "Atkinson Hyperlegible", "Segoe UI", system-ui, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
@@ -31,14 +35,14 @@
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bg: #0B191B; --surface: #12262A; --soft: #16323A; --ink: #E5F0EE; --muted: #9BB2B3;
-    --line: #234044; --teal: #52C3B7; --teal-ink: #062022; --straw: #F2C14E; --straw-ink: #F5CF73; --straw-soft: #2E2711;
+    --bg: #141A2E; --surface: #1C2340; --soft: #242C4D; --ink: #F4EEE4; --muted: #A9AEC4;
+    --line: #2E365A; --teal: #F29A82; --teal-ink: #1A1F35; --straw: #F2967D; --straw-ink: #F6B5A2; --straw-soft: #3A2620; --accent-text: #F4A48D; --mascot: #EC7F66; --cheek: #F8BBA6;
     color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
-  --bg: #0B191B; --surface: #12262A; --soft: #16323A; --ink: #E5F0EE; --muted: #9BB2B3;
-  --line: #234044; --teal: #52C3B7; --teal-ink: #062022; --straw: #F2C14E; --straw-ink: #F5CF73; --straw-soft: #2E2711;
+  --bg: #141A2E; --surface: #1C2340; --soft: #242C4D; --ink: #F4EEE4; --muted: #A9AEC4;
+    --line: #2E365A; --teal: #F29A82; --teal-ink: #1A1F35; --straw: #F2967D; --straw-ink: #F6B5A2; --straw-soft: #3A2620; --accent-text: #F4A48D; --mascot: #EC7F66; --cheek: #F8BBA6;
   color-scheme: dark;
 }
 
@@ -67,7 +71,7 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 header.site { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: color-mix(in srgb, var(--bg) 92%, transparent); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
 header.site .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 12px; flex-wrap: wrap; }
 .logo { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink); font-family: var(--font-display); font-weight: 800; font-size: 1.45rem; }
-.logo b { color: var(--teal); font-weight: 800; }
+.logo b { color: var(--accent-text); font-weight: 800; }
 .logo svg { width: 34px; height: 40px; flex: none; }
 nav.main { display: flex; gap: 4px; flex-wrap: wrap; }
 nav.main a { text-decoration: none; color: var(--muted); font-weight: 700; padding: 6px 12px; border-radius: 999px; font-size: 0.95rem; }
@@ -82,7 +86,8 @@ section.view { display: grid; gap: 56px; }
 .hero > * { min-width: 0; }
 .hero p.lede { font-size: 1.2rem; color: var(--muted); max-width: 46ch; }
 .hero .actions { display: flex; gap: 12px; flex-wrap: wrap; }
-.hero h1 em { font-style: normal; color: var(--teal); }
+.hero h1 em { font-style: normal; color: var(--accent-text); }
+.hero-art { display: block; width: 100%; max-width: 420px; height: auto; margin-inline: auto; }
 
 /* Hydration chart: the signature detail */
 .chart { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 20px; display: grid; gap: 14px; }
@@ -189,13 +194,17 @@ footer.site .wrap { padding-block: 32px; display: grid; gap: 20px; }
   <div class="wrap">
     <a class="logo" href="#home" aria-label="UroGuy home">
       <svg viewBox="0 0 34 40" aria-hidden="true">
-        <path d="M17 2 C17 2 4 17 4 26 a13 13 0 0 0 26 0 C30 17 17 2 17 2 Z" fill="var(--teal)"/>
-        <circle cx="12" cy="25" r="4.2" fill="var(--surface)" stroke="var(--ink)" stroke-width="1.8"/>
-        <circle cx="22" cy="25" r="4.2" fill="var(--surface)" stroke="var(--ink)" stroke-width="1.8"/>
-        <path d="M16.2 25 h1.6" stroke="var(--ink)" stroke-width="1.8"/>
-        <circle cx="12.8" cy="25.5" r="1.4" fill="var(--ink)"/>
-        <circle cx="22.8" cy="25.5" r="1.4" fill="var(--ink)"/>
-        <path d="M13 32 q4 3 8 0" stroke="var(--surface)" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+        <path d="M15 2 C25 2 30 7 30 13 C30 16.5 24.5 17 24.5 20.5 C24.5 24 30 24.5 30 28.5 C30 34.5 24 38 15 38 C7 38 3 31 3 20 C3 9 7 2 15 2 Z" fill="var(--mascot)"/>
+        <path d="M25 21 q5 2 5.5 9 t1.5 9" stroke="var(--mascot)" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+        <circle cx="10" cy="18" r="4" fill="var(--surface)" stroke="var(--ink)" stroke-width="1.7"/>
+        <circle cx="19.5" cy="18" r="4" fill="var(--surface)" stroke="var(--ink)" stroke-width="1.7"/>
+        <path d="M14 18 h1.5" stroke="var(--ink)" stroke-width="1.7"/>
+        <circle cx="10.7" cy="18.5" r="1.4" fill="var(--ink)"/>
+        <circle cx="20.2" cy="18.5" r="1.4" fill="var(--ink)"/>
+        <ellipse cx="6.5" cy="25" rx="2" ry="1.3" fill="var(--cheek)"/>
+        <ellipse cx="21.5" cy="25" rx="2" ry="1.3" fill="var(--cheek)"/>
+        <path d="M11 25.5 q3.5 3.2 7 0" stroke="var(--surface)" stroke-width="1.7" fill="none" stroke-linecap="round"/>
+        <path d="M8 8 q2.5 -3 6.5 -3.2" stroke="var(--surface)" stroke-width="1.5" fill="none" stroke-linecap="round" opacity=".45"/>
       </svg>
       <span>Uro<b>Guy</b></span>
     </a>
@@ -216,13 +225,57 @@ footer.site .wrap { padding-block: 32px; display: grid; gap: 20px; }
   <div class="hero">
     <div class="stack" style="gap:20px">
       <span class="label">Urology, explained like a friend would</span>
-      <h1>Your plumbing, <em>without the awkward.</em></h1>
+      <h1>Dreaming of getting <em>everyone's urine out.</em></h1>
       <p class="lede">Kidney stones, prostates, bladders and everything below the belt, explained in plain language. Short videos, clear articles, zero judgement.</p>
       <div class="actions">
         <a class="btn btn-primary" href="#learn">Start learning</a>
         <a class="btn btn-ghost" href="#videos">Watch videos</a>
       </div>
     </div>
+    <div class="stack" style="gap:8px">
+    <svg class="hero-art" viewBox="0 0 340 220" role="img" aria-label="The UroGuy kidney happily spraying a giant waterfall onto a cactus through its trunk-like ureter">
+      <ellipse cx="170" cy="204" rx="160" ry="10" fill="var(--soft)"/>
+      <!-- puddle -->
+      <ellipse cx="262" cy="203" rx="62" ry="8" fill="#8FD3EE" opacity=".55"/>
+      <!-- waterfall -->
+      <path d="M186 68 C222 60 256 68 268 84 C282 100 290 140 296 200 L232 200 C238 150 244 110 236 98 C228 88 210 84 186 82 Z" fill="#8FD3EE" opacity=".85"/>
+      <path d="M196 72 C232 70 254 82 262 96 M248 110 C252 140 250 170 248 196 M270 106 C278 140 282 170 284 196" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" opacity=".7"/>
+      <circle cx="226" cy="190" r="4" fill="#8FD3EE"/><circle cx="304" cy="186" r="5" fill="#8FD3EE"/><circle cx="216" cy="198" r="3" fill="#8FD3EE"/><circle cx="314" cy="196" r="3" fill="#8FD3EE"/>
+      <!-- cactus -->
+      <g>
+        <path d="M250 168 V96 a16 16 0 0 1 32 0 V168 Z" fill="#5FA35A"/>
+        <path d="M250 140 h-12 a8 8 0 0 1 -8 -8 v-18 a7 7 0 0 1 14 0 v12 h6 Z" fill="#5FA35A"/>
+        <path d="M282 128 h10 a8 8 0 0 0 8 -8 v-14 a7 7 0 0 0 -14 0 v8 h-4 Z" fill="#5FA35A"/>
+        <path d="M262 100 v60 M272 100 v60" stroke="#4A8A46" stroke-width="2" stroke-linecap="round"/>
+        <circle cx="261" cy="112" r="2.4" fill="#1A2340"/>
+        <circle cx="274" cy="112" r="2.4" fill="#1A2340"/>
+        <ellipse cx="267.5" cy="122" rx="3" ry="3.6" fill="#1A2340"/>
+        <path d="M285 96 q4 6 0 9 q-4 -3 0 -9 Z" fill="#8FD3EE"/>
+        <circle cx="266" cy="79" r="5" fill="#F29BB5"/><circle cx="266" cy="79" r="2" fill="var(--cheek)"/>
+        <path d="M241 120 l-5 -2 M246 104 l-5 -3 M287 150 l5 -1 M253 156 l-5 1" stroke="#1A2340" stroke-width="1.2" stroke-linecap="round" opacity=".5"/>
+      </g>
+      <!-- pot -->
+      <path d="M238 166 h56 l-6 34 h-44 Z" fill="#D9774A"/>
+      <rect x="234" y="160" width="64" height="12" rx="3" fill="#E58A5C"/>
+      <!-- ureter trunk -->
+      <path d="M96 141 C128 156 152 146 150 118 C148 96 158 80 180 76" stroke="var(--mascot)" stroke-width="9" fill="none" stroke-linecap="round"/>
+      <path d="M176 70 l9 -2 l2 14 l-9 -1 Z" fill="var(--mascot)"/>
+      <path d="M140 140 q6 -4 8 -12 M145 104 q3 -8 9 -12" stroke="var(--surface)" stroke-width="1.5" fill="none" stroke-linecap="round" opacity=".35"/>
+      <!-- kidney mascot -->
+      <g transform="translate(22 78) scale(3)">
+        <path d="M15 2 C25 2 30 7 30 13 C30 16.5 24.5 17 24.5 20.5 C24.5 24 30 24.5 30 28.5 C30 34.5 24 38 15 38 C7 38 3 31 3 20 C3 9 7 2 15 2 Z" fill="var(--mascot)"/>
+        <circle cx="10" cy="18" r="4" fill="var(--surface)" stroke="var(--ink)" stroke-width="1.7"/>
+        <circle cx="19.5" cy="18" r="4" fill="var(--surface)" stroke="var(--ink)" stroke-width="1.7"/>
+        <path d="M14 18 h1.5" stroke="var(--ink)" stroke-width="1.7"/>
+        <path d="M8.2 18.6 q1.8 -2 3.6 0 M17.7 18.6 q1.8 -2 3.6 0" stroke="var(--ink)" stroke-width="1.3" fill="none" stroke-linecap="round"/>
+        <ellipse cx="6.5" cy="25" rx="2" ry="1.3" fill="var(--cheek)"/>
+        <ellipse cx="21.5" cy="25" rx="2" ry="1.3" fill="var(--cheek)"/>
+        <path d="M10.5 25 q4 4.5 8 0 Z" fill="var(--ink)" stroke="var(--surface)" stroke-width="1.2" stroke-linejoin="round"/>
+        <path d="M8 8 q2.5 -3 6.5 -3.2" stroke="var(--surface)" stroke-width="1.5" fill="none" stroke-linecap="round" opacity=".45"/>
+        <path d="M4 16 q-4 -5 -2 -10" stroke="var(--mascot)" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+      </g>
+      <path d="M14 82 l-7 -4 M20 70 l-3 -7" stroke="var(--cheek)" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+    </svg>
     <div class="chart" aria-labelledby="chart-title">
       <div class="section-head"><h3 id="chart-title">Quick check: what's your pee saying?</h3></div>
       <div class="swatches" role="group" aria-label="Urine colour chart">
@@ -238,6 +291,7 @@ footer.site .wrap { padding-block: 32px; display: grid; gap: 20px; }
       <div class="scale label"><span>Well hydrated</span><span>Drink up</span></div>
       <p class="reading" id="reading" aria-live="polite"><strong>Pale straw:</strong> the sweet spot. You're well hydrated, keep doing what you're doing.</p>
       <p class="label" style="text-transform:none;letter-spacing:0">A rough guide only. Some foods, vitamins and medicines change colour. Red or brown pee is a reason to see a doctor.</p>
+    </div>
     </div>
   </div>
 
@@ -432,7 +486,7 @@ footer.site .wrap { padding-block: 32px; display: grid; gap: 20px; }
 <!-- ABOUT -->
 <section class="view" data-view="about" hidden>
   <div class="about">
-    <div class="portrait"><div class="stack" style="gap:6px;justify-items:center"><svg viewBox="0 0 34 40" width="64" height="76" aria-hidden="true"><path d="M17 2 C17 2 4 17 4 26 a13 13 0 0 0 26 0 C30 17 17 2 17 2 Z" fill="var(--teal)"/></svg><span class="label">Photo goes here</span></div></div>
+    <div class="portrait"><div class="stack" style="gap:6px;justify-items:center"><svg viewBox="0 0 34 40" width="64" height="76" aria-hidden="true"><path d="M15 2 C25 2 30 7 30 13 C30 16.5 24.5 17 24.5 20.5 C24.5 24 30 24.5 30 28.5 C30 34.5 24 38 15 38 C7 38 3 31 3 20 C3 9 7 2 15 2 Z" fill="var(--mascot)"/><path d="M25 21 q5 2 5.5 9 t1.5 9" stroke="var(--mascot)" stroke-width="2.4" fill="none" stroke-linecap="round"/><circle cx="10" cy="18" r="4" fill="var(--surface)" stroke="var(--ink)" stroke-width="1.7"/><circle cx="19.5" cy="18" r="4" fill="var(--surface)" stroke="var(--ink)" stroke-width="1.7"/><path d="M14 18 h1.5" stroke="var(--ink)" stroke-width="1.7"/><circle cx="10.7" cy="18.5" r="1.4" fill="var(--ink)"/><circle cx="20.2" cy="18.5" r="1.4" fill="var(--ink)"/><ellipse cx="6.5" cy="25" rx="2" ry="1.3" fill="var(--cheek)"/><ellipse cx="21.5" cy="25" rx="2" ry="1.3" fill="var(--cheek)"/><path d="M11 25.5 q3.5 3.2 7 0" stroke="var(--surface)" stroke-width="1.7" fill="none" stroke-linecap="round"/><path d="M8 8 q2.5 -3 6.5 -3.2" stroke="var(--surface)" stroke-width="1.5" fill="none" stroke-linecap="round" opacity=".45"/></svg><span class="label">Photo goes here</span></div></div>
     <div class="stack" style="gap:24px">
       <div class="stack" style="gap:10px">
         <span class="label">About</span>
